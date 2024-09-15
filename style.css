@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #19191b;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+/* Navbar link styles */
+.nav-links a {
+    color: white;
+    padding: 10px;
+    text-decoration: none; /* Remove underline initially */
+    border-bottom: 2px solid transparent; /* Add invisible underline */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+}
+
+/* Change color and underline on hover */
+.nav-links a:hover {
+    color: #ff6347; /* Change color on hover (tomato in this example) */
+    border-bottom: 2px solid #ff6347; /* Add visible underline on hover */
+}
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+#bio{
+    background-color: white;
+}
+
+.bio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.bio-details {
+    max-width: 600px;
+}
+/* Container styles */
+.bio {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    align-items: center;
+}
+
+/* Animation for the bio details */
+.bio-details {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-50px); /* Start slightly off-screen to the left */
+    animation: slideInBio 1s ease forwards; /* Trigger slide-in animation */
+}
+
+@keyframes slideInBio {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Move into original position */
+    }
+}
+
+/* Animation for the profile picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateX(50px); /* Start slightly off-screen to the right */
+    animation: slideInPic 1s ease forwards;
+    animation-delay: 1s; /* Delay the picture animation by 1 second */
+}
+
+@keyframes slideInPic {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Move into original position */
+    }
+}
+
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.bio, .skills, .projects, .certifications, .contact {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Change the color when hovering over each skill */
+.skill-item:hover {
+    background-color: #ff6347; /* Example: change background to tomato color */
+    color: #fff;
+}
+
+
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #f4f4f4;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+.project-container a{
+    text-decoration: none; 
+    color: black;
+}
+.project-card:hover {
+    transform: translateY(-10px); /* Lift the card up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0); /* Darker shadow */
+    background-color: #ff6347;
+}
+
+.certifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.certifications ul li {
+    background-color: #e9e9e9;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.certifications {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.certifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.certifications li {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+}
+
+/* Animation class */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease forwards; /* Animation for appearance */
+}
+
+/* Keyframes for the fade and slide-up effect */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .bio-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .project-card {
+        width: 80%;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Huzaifa.</div>
+            <ul class="nav-links">
+                <li><a href="#bio">Bio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Bio Data Section -->
+    <section id="bio" class="bio">
+        <div class="bio-container">
+            <img src="my-pic1.jpeg" alt="Profile Picture" class="profile-pic">
+            <div class="bio-details">
+                <h2>Bio Data</h2>
+                <p>Hello! I am Huzaifa Kashif, a Computer Science student and web enthausist with a passion for creating amazing websites and web applications. I specialize in frontend and backend development, and I love bringing ideas to life in the browser.</p>
+                <p><strong>Email:</strong> mohammadhuzaifakashif.bscsf22@iba-suk.edu.pk</p>
+                <p><strong>Phone:</strong> 03173652169</p>
+                <p><strong>Location:</strong> Sukkur IBA University</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill-container">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">React</div>
+            <div class="skill-item">Node.js</div>
+            <div class="skill-item">Python</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <a href="https://your-portfolio-link.com" class="project-card" target="_blank">
+                <h3>Project 1: Portfolio Website</h3>
+                <p>A personal portfolio website to showcase my skills and projects.</p>
+            </a>
+            <a href="https://your-ecommerce-platform-link.com" class="project-card" target="_blank">
+                <h3>Project 2: E-commerce Platform</h3>
+                <p>A full-featured e-commerce website built with Node.js and MongoDB.</p>
+            </a>
+            <a href="https://your-chat-app-link.com" class="project-card" target="_blank">
+                <h3>Project 3: Chat Application</h3>
+                <p>A real-time chat application using WebSockets.</p>
+            </a>
+        </div>
+    </section>
+    
+
+    
+    <section id="certifications" class="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Certified Web Developer - FreeCodeCamp</li>
+            <li>JavaScript Mastery - Udemy</li>
+            <li>Full-Stack Web Development - Coursera</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p> Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
